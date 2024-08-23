@@ -1,10 +1,10 @@
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Header from './components/Header';
-import AboutMe from './pages/AboutMe';
-import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
-import Resume from './pages/Resume';
+import AboutMe from './assets/pages/AboutMe';
+import Portfolio from './assets/pages/Portfolio';
+import Contact from './assets/pages/Contact';
+import Resume from './assets/pages/Resume';
 
 function App() {
   return (
