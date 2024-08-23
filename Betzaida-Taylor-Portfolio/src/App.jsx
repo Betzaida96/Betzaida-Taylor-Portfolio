@@ -8,7 +8,7 @@ import Resume from './assets/pages/Resume';
 
 function App() {
   return (
-
+    <Router>
       <div>
         <Header />
         <main>
@@ -20,8 +20,9 @@ function App() {
           </Routes>
         </main>
       </div>
+    </Router>
 
   )
 }
 
-export default App
+export default App;

@@ -3,17 +3,17 @@ import {Link} from 'react-router-dom'
 
 const Header = () => {
     return(
-        <Header>
+        <header>
             <h1>Betzaida Taylor</h1>
             <nav>
                 <ul>
                     <li><Link to="/">About Me</Link></li>
-                    <li><Link to="/Portfolio"></Link>Portfolio</li>
-                    <li><Link to="/Contact"></Link>Contact</li>
-                    <li><Link to="/Resume"></Link>Resume</li>
+                    <li><Link to="/Portfolio">Portfolio</Link></li>
+                    <li><Link to="/Contact">Contact</Link></li>
+                    <li><Link to="/Resume">Resume</Link></li>
                 </ul>
             </nav>
-        </Header>
+        </header>
     );
 };
 
