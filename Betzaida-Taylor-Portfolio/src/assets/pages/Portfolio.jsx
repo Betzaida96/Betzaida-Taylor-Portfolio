@@ -2,9 +2,9 @@ import React from "react";
 import gameGalaxxyImg from '../images/game-galaxxy.png';
 import weatherDashboardImg from '../images/weather-dashboard.png';
 import noteTakerImg from '../images/note-taker.png';
-import planPalImg from 'planpal.png';
-import campingProcrastinatorImg from 'camping-procrastinator.png';
-import employeeTrackerImg from 'employee-tracker.png';
+import planPalImg from '../images/planpal.png';
+import campingProcrastinatorImg from '../images/camping-procrastinator.png';
+import employeeTrackerImg from '../images/employee-tracker.png';
 
 const Portfolio = () => {
     const projects = [
