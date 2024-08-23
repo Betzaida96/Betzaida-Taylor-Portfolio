@@ -48,24 +48,28 @@ const Portfolio = () => {
     ];
 
     return (
-        <section>
-            <h2>Portfolio</h2>
-            <div className="portfolio-grid">
+        <section className="py-9 bg-lightLightPink">
+            <div className="container mx-auto">
+            <h2 className="text-4xl font-bold text-pinkyRed mb-8">Portfolio</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
                 {projects.map((project, index) => (
-                    <div key={index} className="portfolio-item">
-                        <img src={project.imageUrl} alt={`${project.title} screenshot`} />
-                        <h3>{project.title}</h3>
-                        <div className="portfolio-links">
+                    <div key={index} className="portfolio-item border-4 border-lavender rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <img src={project.imageUrl} alt={`${project.title} screenshot`} className="w-full h-auto"/>
+                        <div className="p-4">
+                        <h3 className="text-2xl font-semibold text-pinkyRed text-center mb-2">{project.title}</h3>
+                        <div className="portfolio-links flex justify-center space-x-4">
                             {project.deployedUrl ? (
-                                <a href={project.deployedUrl} target="_blank" rel="noopener noreferrer">View App</a>
+                                <a href={project.deployedUrl} target="_blank" rel="noopener noreferrer" className="text-brightLavender hover:text-rosePink">View App</a>
                             ): (
-                                <a href={project.videoUrl} target="_blank" rel="noopener noreferrer">Watch Video</a>
+                                <a href={project.videoUrl} target="_blank" rel="noopener noreferrer" className="text-brightLavender hover:text-rosePink">Watch Video</a>
                             )}
-                            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">View Code</a>
+                            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-brightLavender hover:text-rosePink">View Code</a>
                         </div>
+                    </div>
                     </div>
                 ))}
             </div>
+          </div>
         </section>
     );
 
