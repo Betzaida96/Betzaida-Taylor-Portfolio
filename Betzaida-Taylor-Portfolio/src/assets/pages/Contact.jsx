@@ -32,51 +32,50 @@ const Contact = () => {
         };
 
         return (
-            <section>
-                <h2>Contact Me</h2>
-                <form onSubmit={handleSubmit}>
-                    <div>
-                        <label htmlFor="name">Name:</label>
+            <section className="py-12 bg-lightLightPink">
+                <div className="container mx-auto max-w-lg">
+                <h2 className="text-4xl font-bold text-pinkyRed mb-8 text-center">Contact Me</h2>
+                <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg">
+                    <div className="mb-6">
+                        <label htmlFor="name" className="block text-lg font-medium text-pinkyRed mb-2">Name:</label>
                         <input
                         type="text"
                         id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
+                        className="w-full p-3 border border-brightLavender rounded-lg focus:outline-none focus:ring-2 focus:ring-pinkyRed"
                         onBlur={() => {
                             if (!formData.name) setErrors({ ...errors, name: 'Name is required' });
                         }}
                         />
+                       
                         {errors.name && <p className="error">{errors.name}</p>}
                     </div>
-                    <div>
-                        <label htmlFor="email">Email:</label>
+                    <div className="mb-6">
+                        <label htmlFor="email" className="block text-lg font-medium text-pinkyRed mb-2">Email:</label>
                         <input
                         type="email"
                         id="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        onBlur={() => {
-                            if (!formData.email) setErrors({ ...errors, email: 'Email is required'});
-                            else if (!/\S+@\S+\.\S+/.test(formData.email)) setErrors({ ...errors, email: 'Email is invalid' });
-                        }}
-                        />{errors.email && <p className="error">{errors.email}</p>}
+                        className="w-full p-3 border border-brightLavender rounded-lg focus:outline-none focus:ring-2 focus:ring-pinkyRed"
+                        />
                     </div>
-                    <div>
-                        <label htmlFor="message">Message:</label>
+                    <div className="mb-6">
+                        <label htmlFor="message" className="block text-lg font-medium text-pinkyRed mb-2">Message:</label>
                         <textarea
                         id="message"
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        onBlur={() => {
-                            if (!formData.message) setErrors({ ...errors, message: 'Message is required' });
-                        }}
+                        className="w-full p-3 border border-brightLavender rounded-lg focus:outline-none focus:ring-2 focus:ring-pinkyRed"
                         />
-                        {errors.message && <p className="error">{errors.message}</p>}
                     </div>
+                    <button type="submit" className="w-full py-3 bg-rosePink text-white font-bold rounded-lg hover:bg-brightLavender transition-colors duration-200">Send Message</button>
                 </form>
+                </div>
             </section>
         );
 };
