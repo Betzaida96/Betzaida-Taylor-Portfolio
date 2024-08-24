@@ -1,8 +1,7 @@
 [build]
-  command = "npm run build" # The command to build your project
-  publish = "dist"          # The directory to publish to Netlify
+  command = "npm run build"
+  publish = "dist"
 
-# Redirect all requests to index.html for single-page application (SPA)
 [[redirects]]
   from = "/*"
   to = "/index.html"
